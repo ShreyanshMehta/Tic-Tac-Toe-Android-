@@ -16,7 +16,7 @@ import android.widget.ImageView;
 public class FullscreenActivity extends AppCompatActivity {
     private static final boolean AUTO_HIDE = true;
     private static final int AUTO_HIDE_DELAY_MILLIS = 0;
-    private static final int UI_ANIMATION_DELAY = 300;
+    private static final int UI_ANIMATION_DELAY = 0;
     private final Handler mHideHandler = new Handler();
     private View mContentView;
     private final Runnable mHidePart2Runnable = new Runnable() {
@@ -72,15 +72,26 @@ public class FullscreenActivity extends AppCompatActivity {
 
 
 
-    final int[] currPlayer = {0};
-    final int[][][] gameState = {{{-1, -1, -1}, {-1, -1, -1}, {-1, -1, 1}}};
+     int currPlayer = 1;
+     int[][] gameState = {{-1, -1, -1}, {-1, -1, -1}, {-1, -1, -1}};
 
     public void playerTap(View view){
         ImageView img = (ImageView) view;
-        String s = img.getTag().toString();
-        int row = Integer.parseInt(String.valueOf(s.charAt(1)));
-        int col = Integer.parseInt(String.valueOf(s.charAt(2)));
-        Log.d("Tap", "Val: "+row+" "+col);
+        int row = Integer.parseInt(String.valueOf(img.getTag().toString().charAt(1)));
+        int col = Integer.parseInt(String.valueOf(img.getTag().toString().charAt(2)));
+        if(gameState[row-1][col-1]==-1){
+            gameState[row-1][col-1] = currPlayer;
+            img.setTranslationY(-1000f);
+            if(currPlayer==0) {
+                currPlayer = 1;
+                img.setImageResource(R.drawable.o);
+            }
+            else{
+                currPlayer = 0;
+                img.setImageResource(R.drawable.x);
+            }
+            img.animate().translationYBy(1000f).setDuration(300);
+        }
     };
 
     @Override
@@ -98,17 +109,30 @@ public class FullscreenActivity extends AppCompatActivity {
             public void onClick(View v) {
                 for(int i=0; i<3; i++){
                     for(int j=0; j<3; j++){
-                        gameState[0][i][j] = -1;
+                        gameState[i][j] = -1;
                     }
                 }
-                currPlayer[0] = 0;
-                Log.d("my_debug", "my_testing");
+                ImageView img = findViewById(R.id.x11);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x12);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x13);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x21);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x22);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x23);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x31);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x32);
+                img.setImageResource(R.drawable.b);
+                img = findViewById(R.id.x33);
+                img.setImageResource(R.drawable.b);
+                currPlayer = 1;
             }
         });
-
-
-
-
     }
 
 

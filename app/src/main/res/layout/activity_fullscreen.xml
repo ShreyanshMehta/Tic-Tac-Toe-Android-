@@ -128,8 +128,11 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:clickable="true"
+                    android:onClick="playerTap"
+                    android:tag="x11"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x21"
@@ -137,8 +140,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x21"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x31"
@@ -146,8 +151,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x31"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
             </LinearLayout>
 
@@ -163,8 +170,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x12"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x22"
@@ -172,8 +181,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x22"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x32"
@@ -181,8 +192,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x32"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
             </LinearLayout>
 
             <LinearLayout
@@ -197,8 +210,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x13"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x23"
@@ -206,8 +221,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x23"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
 
                 <ImageView
                     android:id="@+id/x33"
@@ -215,8 +232,10 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:visibility="invisible"
-                    app:srcCompat="@drawable/x" />
+                    android:onClick="playerTap"
+                    android:tag="x33"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/b" />
             </LinearLayout>
         </LinearLayout>
 
