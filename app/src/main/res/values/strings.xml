@@ -1,0 +1,9 @@
+<resources>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="heading">Tic Tac Toe</string>
+    <string name="button">Button</string>
+    <string name="reset_btn">Reset</string>
+    <string name="grid">Grid</string>
+</resources>
